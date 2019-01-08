@@ -1,0 +1,3 @@
+sc_common_homepage:
+    path:     /
+    defaults: { _controller: SCCommonBundle:Default:index }

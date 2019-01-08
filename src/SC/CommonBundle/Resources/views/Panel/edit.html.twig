@@ -1,0 +1,59 @@
+{% extends "SCCommonBundle:Panel:layout.html.twig" %}
+
+{% block body %}
+ <section class="content-header">
+      <h1 style="text-align: center"><i class="fa fa-plus"></i> Add a User</h1>
+      <ol class="breadcrumb">
+        <li><a href="{{path('student_list')}}"><i class="fa fa-users"></i> Students</a></li>
+        <li><a href="#">Edit a Student</a></li>
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="invoice" style="margin-bottom: 0; margin-left: 0; margin-right:0; background: #ecf0f5;">
+      <!-- title row -->
+      <!-- info row -->
+      <div class="row invoice-info">
+        <!-- /.col -->
+  <div class="col-md-3 col-sm-12 invoice-col"></div>
+  <div class="col-md-6 col-sm-12 invoice-col">
+
+<div id=daff_form" class="well">
+  {{ form_start(form, {'attr': {'class': 'form-vertical'}}) }}
+
+  {{ form_errors(form) }}
+
+  <table id="exam-table" class="table">
+    <tbody>
+       <tr>
+        <th>{{ form_label(form.firstName) }}</th>
+        <td>{{ form_widget(form.firstName, {'attr': {'class': 'form-control'}}) }}{{ form_errors(form.lastName) }}</td>
+      </tr>
+      <tr>
+        <th>{{ form_label(form.lastName) }}</th>
+        <td>{{ form_widget(form.lastName, {'attr': {'class': 'form-control'}}) }}{{ form_errors(form.lastName) }}</td>
+      </tr>
+      <tr>
+        <th>{{ form_label(form.numEtud) }}</th>
+        <td>{{ form_widget(form.numEtud, {'attr': {'class': 'form-control'}}) }}{{ form_errors(form.lastName) }}</td>
+      </tr>
+      <tr>
+        <th>{{ form_label(form.department) }}</th>
+        <td>{{ form_widget(form.department, {'attr': {'class': 'form-control'}}) }}{{ form_errors(form.department) }}</td>
+      </tr>
+      <tr>
+        <td>{{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}</td>
+      </tr>
+      <tr>
+    </tbody>
+  </table>
+
+  {{ form_rest(form) }}
+
+  {{ form_end(form) }}
+</div>
+</div>
+</div>
+</section>
+<script src="../../public/bower_components/jquery/dist/jquery.min.js"></script>
+
+{% endblock %}

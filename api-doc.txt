@@ -1,0 +1,10 @@
+http://localhost/TestTech/web/app_dev.php/student/students-api/DepartmentName
+
+This request takes a department name as a parameter and will return all the students 
+belonging to said department.
+
+http://localhost/TestTech/web/app_dev.php/student/students-api
+
+This request will return all the student inside the database.
+
+

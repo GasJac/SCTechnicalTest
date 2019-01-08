@@ -1,0 +1,41 @@
+{% extends "SCCommonBundle:Panel:layout.html.twig" %}
+
+{% block body %}
+<script src="../../public/bower_components/jscolor/jscolor.js"></script>
+    <!-- Main content -->
+    <section class="content-header">
+      <h1 style="text-align: center"><i class="fa fa-trash"></i> Remove a student</h1>
+      <ol class="breadcrumb">
+         <li><a href="{{path('student_list')}}"><i class="fa fa-graduation-cap"></i> Students</a></li>
+        <li><a href="#">Remove a student</a></li>
+      </ol>
+    </section>
+    <section class="invoice" style="margin-bottom: 0; margin-left: 0; margin-right:0; background: #ecf0f5";>
+      <!-- title row -->
+      <!-- info row -->
+      <div class="row invoice-info">
+        <!-- /.col -->
+<div class="col-md-12 col-sm-12 invoice-col">
+
+<div id="daff_form" class="well">
+
+  <p>
+    Are you sure you want to remove "{{ student.lastName }}" ?
+  </p>
+
+  <form action="{{ path('student_delete', {'id': student.id}) }}" method="post">
+    <a href="{{ path('student_view', {'id': student.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Back
+    </a>
+    {# Ici j'ai écrit le bouton de soumission à la main #}
+    <input type="submit" value="Remove" class="btn btn-danger" />
+    {# Ceci va générer le champ CSRF #}
+    {{ form_rest(form) }}
+  </form>
+  </div>
+</div>
+</div>
+</section>
+
+{% endblock %}
